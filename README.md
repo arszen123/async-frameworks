@@ -8,6 +8,8 @@ A benchmark comparing performance of async/await in different HTTP frameworks
  - **LoopBack** v3.27
  - **LoopBack next**: core v2.11; repository v3.1; rest v8.0
  - **Sails**: v1.4 (Minimal: generated with cli --minimal option; Without rc: self configured)
+ - **Restify**: v8.5
+ - **Nestjs**: v7.4
 
 ## Results
 
@@ -18,14 +20,16 @@ Memory: 16 GB 1600 MHz DDR3
 
 framework|rps
 -|-:
-hapi | 6791
-fastify | 8464
-koa | 7558
-express | 3955
-loopback | 2013
-loopback-next | 1258
-sails (Without rc) | 557
-sails (Minimal) | 2081
+hapi | 6728
+fastify | 8195
+koa | 7306
+express | 3994
+loopback | 2015
+loopback-next | 1240
+sails (Without rc) | 538
+sails (Minimal) | 2107
+restify | 7229
+nest | 2047
 
 ### Latency
 
@@ -34,13 +38,15 @@ _Time to handle a request in milliseconds._
 framework|latency
 -|-:
 hapi | 1.04
-fastify | 0.8
-koa | 0.97
-express | 2.04
-loopback | 4.5
-loopback-next | 7.35
-sails (Without rc) | 17.44
-sails (Minimal) | 4.34
+fastify | 0.85
+koa | 1
+express | 2.02
+loopback | 4.49
+loopback-next | 7.49
+sails (Without rc) | 18.06
+sails (Minimal) | 4.28
+restify | 0.99
+nest | 4.38
 
 Async/await is not the bottleneck!
 
@@ -50,7 +56,7 @@ Async/await is not the bottleneck!
 # Install dependencies
 npm i
 # Build docker image
-docker build .
+docker build . --tag [image]
 # Run docker image
-docker run [image]
+docker run -v "$(pwd)":/app [image]
 ```

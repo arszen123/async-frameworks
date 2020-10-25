@@ -8,7 +8,6 @@ RUN apk add --no-cache mongodb nodejs-npm
 RUN mkdir /data mkdir /data/db
 
 VOLUME /app
-COPY . /app
 COPY start.sh /start.sh
 WORKDIR /app
 

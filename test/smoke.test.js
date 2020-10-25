@@ -6,10 +6,7 @@ const db = require('../lib/db');
 const apps = require('../lib/index');
 
 before(db.connect);
-after(async function () {
-  await db.close();
-  process.exit(0);
-});
+after(db.close);
 
 Object.keys(apps).forEach(name => {
   describe(`${name} app`, () => {

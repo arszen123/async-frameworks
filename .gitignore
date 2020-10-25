@@ -1,5 +1,6 @@
 # Transpiled files
 lib/loopback-next.*
+lib/nest.*
 
 # Logs
 logs
@@ -60,3 +61,4 @@ typings/
 # dotenv environment variables file
 .env
 
+mongod.*
