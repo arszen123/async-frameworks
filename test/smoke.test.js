@@ -30,7 +30,7 @@ async function verify(port) {
       }
     })
     .expect([{
-      _id : '59eeec2b52f8816120d53cc0',
+      // _id : '59eeec2b52f8816120d53cc0',
       ean : 4006381333931,
       name : 'Pencil',
     }]);
