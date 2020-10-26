@@ -42,6 +42,7 @@
     "mongodb": "^3.6.2",
     "mongoose": "^5.10.10",
     "restify": "^8.5.1",
+    "rxjs": "^6.6.3",
     "sails": "^1.4.0",
     "supertest": "^5.0.0",
     "typescript": "^4.0.3"
