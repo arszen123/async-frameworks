@@ -1,0 +1,47 @@
+
+> async-frameworks@1.0.0 prestart /home/runner/work/async-frameworks/async-frameworks
+> npm run tsc-build
+
+
+> async-frameworks@1.0.0 tsc-build /home/runner/work/async-frameworks/async-frameworks
+> tsc --build ./src/nest-tsconfig.json && tsc --build ./src/loopback-next-tsconfig.json
+
+
+> async-frameworks@1.0.0 start /home/runner/work/async-frameworks/async-frameworks
+> node --expose-gc ./bench.js
+
+Benchmarking hapi
+Benchmarking fastify
+Benchmarking koa
+Benchmarking express
+Benchmarking loopback
+Benchmarking loopback-next
+Benchmarking sails-without-rc
+Benchmarking sails-minimal
+Benchmarking restify
+Benchmarking nest
+Requests per second {
+  hapi: 3900.5,
+  fastify: 4379.94,
+  koa: 4231.67,
+  express: 2876.04,
+  loopback: 1571.74,
+  'loopback-next': 948.27,
+  'sails-without-rc': 498.2,
+  'sails-minimal': 1384.14,
+  restify: 3999.04,
+  nest: 1597.47
+}
+Latency {
+  hapi: 2.08,
+  fastify: 1.78,
+  koa: 1.87,
+  express: 2.99,
+  loopback: 5.87,
+  'loopback-next': 10.05,
+  'sails-without-rc': 19.59,
+  'sails-minimal': 6.73,
+  restify: 2,
+  nest: 5.76
+}
+done
